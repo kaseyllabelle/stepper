@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stepper</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- The stepper does not depend on Bootstrap. The Bootstrap grid is added for demo purposes only. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="global.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- 
+      The stepper only requires the markup on lines 20-26.
+      .container-fluid, .row, and .col are added for demo purposes.
+      Add JS to create a list item for each step, and apply classes (past, current, future) for styling purposes.
+    -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <ol class="stepper">
+            <li class="step past">Step 1</li>
+            <li class="step past">Step 2</li>
+            <li class="step current">Step 3</li>
+            <li class="step future">Step 4 has a long name, but it doesn't break the layout!</li>
+            <li class="step future">Step 5</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

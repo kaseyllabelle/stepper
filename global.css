@@ -1,0 +1,94 @@
+/*
+// Most of this code is not actually required for the stepper.
+// Required and optional styles are explicitly noted.
+*/
+
+/* Global variables (optional) */
+:root {
+  --font-color-primary: #221F4D;
+  --font-color-secondary: #516F90;
+  --accent-color-primary: #FDA94E;
+  --accent-color-secondary: #B7CFFA;
+  --font-family-default: "Open Sans", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semi-bold: 600;
+  --font-family-icon: "Font Awesome 5 Free";
+  --icon-style-regular: 400;
+  --icon-style-solid: 600;
+  --icon-check-circle: "\f058";
+}
+
+/* Global styles (optional) */
+*
+{
+  font-family: var(--font-family-default);
+  font-weight: var(--font-weight-regular);
+  color: var(--font-color-primary);
+}
+
+/* Stepper styles (required) */
+.stepper
+{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.step
+{
+  flex-basis: 0;
+  flex-grow: 2;
+  text-align: center;
+}
+
+.step:first-of-type
+{
+  flex-grow: 1;
+  text-align: left;
+}
+  
+.step:last-of-type
+{
+  flex-grow: 1;
+  text-align: right;
+}
+
+/* Stepper styles (optional) */
+.step::before
+{
+  content: var(--icon-check-circle);
+  display: block;
+  font-family: var(--font-family-icon);
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.step.past::before
+{
+  font-weight: var(--icon-style-solid);
+  color: var(--accent-color-primary);
+}
+
+.step.current
+{
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.step.current::before
+{
+  color: var(--accent-color-primary);
+  opacity: 1;
+}
+  
+.step.future
+{
+  color: var(--font-color-secondary);
+}
+
+.step.future::before
+{
+  font-weight: var(--icon-style-regular);
+  color: var(--accent-color-secondary);
+}
